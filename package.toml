@@ -1,0 +1,6 @@
+[package]
+version = "0.1.0"
+name = { en = "Exchange rate", zh = "汇率查询" }
+summary = { en = "Convert amounts between currencies at the latest or a past day's rate", zh = "按最新或某天的汇率换算金额，中文币名也认" }
+author = "SHORiN-KiWATA"
+icon = "chart-bar"
