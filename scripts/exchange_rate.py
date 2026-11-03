@@ -67,7 +67,7 @@ def code_of(name):
 
 
 def cache_path(name):
-    root = os.environ.get("MIYU_SCRIPT_CACHE_DIR")
+    root = os.environ.get("MIYU_CACHE_DIR")
     return os.path.join(root, name) if root else None
 
 
