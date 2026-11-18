@@ -232,9 +232,9 @@ def run(args):
         note = f"（{note}）" if note else ""
         lines.append(f"- {conversion}{note}" if len(rows) > 1 else f"{fmt_number(amount)} {base} = {conversion}{note}")
     credits = "；".join(f"{SOURCES[key][0]}（{SOURCES[key][2]}，{SOURCES[key][1]}）" for key in used)
-    when = "" if per_row else f"汇率日期 {dates.pop()}，"
     if not used:
         return lines[-1] if len(rows) == 1 else "\n".join(line for line in lines if line)
+    when = "" if per_row else f"汇率日期 {dates.pop()}，"
     ahead = "（是央行公布的生效日，可能比今天晚一天）" if any(
         row["date"] > time.strftime("%Y-%m-%d") for row in rows if row["source"] in SOURCES) else ""
     lines.append(f"{when}来源 {credits}。仅供参考，不是银行牌价{ahead}")
